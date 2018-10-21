@@ -21,7 +21,10 @@ int main(int argc, const char * argv[])
     
     uwValue = GetBit(&uwWord, uwStart);
     
-    printf("value is = %d \n", uwValue);
+    SetBit(&uwWord, uwStart + 1, 1);
     
+    printf("value is = 0x%x \n", uwValue);
+    
+    printf("word is = 0x%x \n", uwWord);
     return 0;
 }

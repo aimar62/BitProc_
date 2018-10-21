@@ -14,5 +14,5 @@
 
 u32 GetBit(u32 * puwIn, u32 uwStart);
 void SetBit(u32 * puwIn, u32 uwStart,u32 uwValue);
-
+void GetXbits(u32 * puwIn, u32 uwStart,u32 uwNum, u32 uwOutstart, u32 *puwOut);
 #endif /* BitProc_h */

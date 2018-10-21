@@ -57,3 +57,30 @@ void SetBit(u32 * puwIn, u32 uwStart,u32 uwValue)
     
 }
 
+
+void GetXbits(u32 * puwIn, u32 uwStart,u32 uwNum, u32 uwOutstart, u32 *puwOut)
+{
+    u32 uwloop;
+    u32 uwvalue;
+    
+    for(uwloop = 0; uwloop < uwNum; uwloop++)
+    {
+        uwvalue = GetBit(puwIn, uwStart + uwloop);
+        SetBit(puwOut, uwOutstart + uwloop, uwvalue);
+    }
+}
+
+
+void SetXbits(u32 *puwIn,u32 uwInstart,u32 uwlen,u32 *puwdest,u32 uwOutstart)
+{
+    u32 uwloop;
+    u32 uwvalue;
+    
+    for(uwloop = 0; uwloop < uwlen; uwloop++)
+    {
+        uwvalue = GetBit(puwIn, uwInstart + uwloop);
+        
+        SetBit(puwdest, uwOutstart + uwloop, uwvalue);
+    }
+}
+

@@ -21,6 +21,10 @@ int main(int argc, const char * argv[])
     
     u32 uwOut = 0;
     
+    u32 uwInWord = 0x3c;
+    
+    u32 uwOutWord = 0;
+    
     uwValue = GetBit(&uwWord, uwStart);
     
     SetBit(&uwWord, uwStart + 1, 1);
@@ -33,6 +37,9 @@ int main(int argc, const char * argv[])
     
     printf("uwOut is = 0x%x \n", uwOut);
     
+    SetXbits(&uwInWord, 2, 4, &uwOutWord,0);
+    
+    printf("uwOutWord is = 0x%x \n", uwOutWord);
     
     return 0;
 }

@@ -41,5 +41,7 @@ int main(int argc, const char * argv[])
     
     printf("uwOutWord is = 0x%x \n", uwOutWord);
     
+    //modify 1023
+    
     return 0;
 }
